@@ -1,8 +1,8 @@
 Office.initialize = function (reason) {
     // might need to record somewhere if we haven't loaded it
+        document.body.innerHTML = "outside!";
     
     
-    $(document).ready(function(){ 
 
         function onDocumentSelectionChanged(eventArgs){
             document.body.innerHTML = "Hello WOrld!";
@@ -13,6 +13,6 @@ Office.initialize = function (reason) {
         
         
         
-    });
+    
 }
 
