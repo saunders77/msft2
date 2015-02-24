@@ -6,14 +6,7 @@ Office.initialize = function (reason) {
         
         $("#stopPolling").click(function(){
             document.getElementById("setTicker").innerHTML = "clicked";
-            Office.context.document.setSelectedDataAsync("Hello Worldp!",
-                function (asyncResult) {
-                    var error = asyncResult.error;
-                    if (asyncResult.status === "failed"){
-                        document.getElementById("setTicker").innerHTML = error.name + ": " + error.message;
-                    }
-                }
-            );
+            window.href = "https://michael-saunders.com/stocksapp/xstaging/pages/stocks.html";
         });
         
         document.getElementById("setTicker").innerHTML = "inside";
