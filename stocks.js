@@ -10,9 +10,10 @@ Office.initialize = function (reason) {
                 function (asyncResult) {
                     var error = asyncResult.error;
                     if (asyncResult.status === "failed"){
-                    write(error.name + ": " + error.message);
+                        document.getElementById("setTicker").innerHTML = error.name + ": " + error.message;
+                    }
                 }
-            });
+            );
         });
         
         document.getElementById("setTicker").innerHTML = "inside";
