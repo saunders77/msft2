@@ -4,12 +4,23 @@ Office.initialize = function (reason) {
     
     $(document).ready(function(){
         
+        $("#stopPolling").click(function(){
+            document.getElementById("setTicker").innerHTML = "clicked";
+            Office.context.document.setSelectedDataAsync("Hello Worldp!",
+                function (asyncResult) {
+                    var error = asyncResult.error;
+                    if (asyncResult.status === "failed"){
+                    write(error.name + ": " + error.message);
+                }
+            });
+        });
+        
         document.getElementById("setTicker").innerHTML = "inside";
         function onDocumentSelectionChanged(eventArgs){
             document.getElementById("setTicker").innerHTML = "Hello WOrld!";
         }
         
-        ran0d = 7;
+        
         Office.context.document.addHandlerAsync(Office.EventType.DocumentSelectionChanged, onDocumentSelectionChanged);
         
         
