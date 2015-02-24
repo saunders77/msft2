@@ -6,7 +6,7 @@ Office.initialize = function (reason) {
         
         $("#stopPolling").click(function(){
             document.getElementById("setTicker").innerHTML = "clicked";
-            window.href = "https://michael-saunders.com/stocksapp/xstaging/pages/stocks.html";
+            window.location.href = "https://michael-saunders.com/stocksapp/xstaging/pages/stocks.html";
         });
         
         document.getElementById("setTicker").innerHTML = "inside";
