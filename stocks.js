@@ -4,9 +4,9 @@ Office.initialize = function (reason) {
     
     $(document).ready(function(){
         
-        document.body.innerHTML = "inside";
+        document.getElementById("setTicker").innerHTML = "inside";
         function onDocumentSelectionChanged(eventArgs){
-            document.body.innerHTML = "Hello WOrld!";
+            document.getElementById("setTicker").innerHTML = "Hello WOrld!";
         }
         
         ran0d = 7;
