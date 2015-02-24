@@ -9,7 +9,7 @@ Office.initialize = function (reason) {
             document.body.innerHTML = "Hello WOrld!";
         }
         
-        
+        ran0d = 7;
         Office.context.document.addHandlerAsync(Office.EventType.DocumentSelectionChanged, onDocumentSelectionChanged);
         
         
